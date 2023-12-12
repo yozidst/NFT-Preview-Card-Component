@@ -3,20 +3,19 @@
 
 :root {
 
-    -color-soft-blue: hsl(215, 51%, 70%);
-    -color-cyan: hsl(178, 100%, 50%);
+    --color-soft-blue: hsl(215, 51%, 70%);
+    --color-cyan: hsl(178, 100%, 50%);
 
-    -color-main-dark-blue: hsl(217, 54%, 11%);
-    -color-card-dark-blue: hsl(216, 50%, 16%);
-    -color-line-dark-blue: hsl(215, 32%, 27%);
-    -color-White: hsl(0, 0%, 100%);
+    --color-main-dark-blue: hsl(217, 54%, 11%);
+    --color-card-dark-blue: hsl(216, 50%, 16%);
+    --color-line-dark-blue: hsl(215, 32%, 27%);
+    --color-White: hsl(0, 0%, 100%);
 
-    -ff: "Barlow Semi Condensed", serif;
-    -fs: 18px;
-    -fw-light: 300;
-    -fw-regular: 400;
-    -fw-bold: 600;
-
+    --ff: "Outfit", serif;
+    --fs: 18px;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 600;
 }
 
 *, 
@@ -27,9 +26,121 @@
 
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
-    font-family: var(-ff);
-    font-size: var(-fs);
+    font-family: var(--ff);
+    font-size: var(--fs);
+    background-color: var(--color-main-dark-blue);
+    min-height: 100vh;
+    color: var(--color-White);
 }
 
+img {
+    display: block; 
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    width: 290px;
+    height: 500px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--color-card-dark-blue);
+    box-shadow: rgba(0, 0, 0, 0.35) -10px 15px 60px;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.token-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.token-name {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    font-weight: var(--fw-bold);
+}
+
+.description {
+    font-size: .925rem;
+    color: var(--color-soft-blue);
+    line-height: 1.2;
+    font-weight: var(--fw-light);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    color: var(--color-cyan);
+    font-size: .750rem;
+    padding-left: 8px;
+    text-align:justify;
+    font-weight: var(--fw-bold);
+}
+
+h3 {
+    color: var(--color-soft-blue);
+    font-size: .8rem;
+    padding-left: 8px;
+    text-align: justify;
+    font-weight: var(--fw-regular);
+}
+
+.card-footer {
+    margin-top: 20px;
+    border-top: 1px solid var(--color-line-dark-blue);
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--color-White);
+}
+
+
+.creator {
+    font-size: .8rem;
+    color: var(--color-soft-blue);
+    padding-left: 16px;
+}
+
+span {
+    color: var(--color-White);
+}
