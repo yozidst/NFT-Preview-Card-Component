@@ -5,6 +5,7 @@
 
     --color-soft-blue: hsl(215, 51%, 70%);
     --color-cyan: hsl(178, 100%, 50%);
+    --color-hover-cyan: hsla(178, 100%, 50%, 0.4);
 
     --color-main-dark-blue: hsl(217, 54%, 11%);
     --color-card-dark-blue: hsl(216, 50%, 16%);
@@ -23,7 +24,6 @@
 *::after {
     box-sizing: border-box;
 }
-
 
 body {
     position: relative;
@@ -48,12 +48,12 @@ img {
 }
 
 .content {
-    width: 290px;
-    height: 500px;
+    max-width: 350px;
+    height: 600px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 24px;
     background-color: var(--color-card-dark-blue);
-    box-shadow: rgba(0, 0, 0, 0.35) -10px 15px 60px;
+    box-shadow: rgba(0, 0, 0, 0.25) -10px 35px 30px;
 }
 
 .card {
@@ -63,9 +63,33 @@ img {
 }
 
 .token-img {
-    width: 250px;
-    height: 250px;
+    max-width: 100%;
     border-radius: 8px;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-hover-cyan);
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+
+.card-hover:hover {
+    opacity: 1;
 }
 
 h1, h2, h3 {
@@ -143,4 +167,10 @@ h3 {
 
 span {
     color: var(--color-White);
+}
+
+span:hover {
+    color: var(--color-cyan);
+    transition: 0.1s ease-in;
+    cursor: pointer;
 }
