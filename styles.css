@@ -98,13 +98,18 @@ h1, h2, h3 {
 }
 
 .token-name {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     margin-top: 20px;
     font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+.token-name:hover {
+    color: var(--color-cyan);
 }
 
 .description {
-    font-size: .925rem;
+    font-size: 1.10rem;
     color: var(--color-soft-blue);
     line-height: 1.2;
     font-weight: var(--fw-light);
